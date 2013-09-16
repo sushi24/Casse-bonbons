@@ -112,6 +112,59 @@ public class Emplacement {
 		return this.emp_droite;
 	}
 
+	/*================
+	== Constructeur ==
+	================*/
+
+	Emplacement () {
+		/**
+		*	Constructeur vide	
+		*/
+		this.plateau = null;
+		this.emp_x = null;
+		this.emp_y = null;
+		this.bonbon = null;
+		this.emp_haut = null;
+		this.emp_bas = null;
+		this.emp_gauche = null;
+		this.emp_droite = null;
+	}
+
+	Emplacement (Plateau plateau, int x, int y, Bonbon bonbon, int type_emplacement) {
+		// A revoir
+		this.plateau = plateau;
+		this.emp_x = x;
+		this.emp_y = y;
+		this.bonbon = bonbon;
+		this.type_emplacement = type_emplacement;
+		if (this.emp_x < 0) {
+			this.emp_haut = null;
+		}
+		else {
+			this.emp_haut = null;
+		}
+		this.emp_haut = null;
+		this.emp_bas = null;
+		this.emp_gauche = null;
+		this.emp_droite = null;
+	}
+
+	/*=============
+	== Fonctions ==
+	=============*/
+
+	Bonbon generer_bonbon () {
+		/**
+		*	Generer un bonbon normal aleatoirement
+		*/
+		Bonbon bonbon = null;
+
+
+
+		return bonbon;
+	}
+
+
 	/*==============
 	== Modifieurs ==
 	==============*/
