@@ -1,0 +1,71 @@
+Détails des fonctionnalités de Candy crush
+
+	Plateau :
+		Colonnes * Lignes = Nombre d emplacement
+
+	Emplacement :
+		Position sur le plateau (nom, x, et y)
+		Contenance (null, libre, bonbon et/ou obstacle)
+
+	Ecoulements des bonbons : 
+
+	Types d obstacles :
+		(0) Null
+		(1) Libre
+		(2) Classique
+		(3) Gelée
+		(4) Réglise
+		(5) Chocolat
+
+		Effets : 
+			(0) Emplacement non disponible
+			(1) Emplacement libre (en attente occupation)
+			(2) Emplacement occupé avec un bonbon
+			(3) Emplacement libre/occupé + bloc objectifs
+			(4) Emplacement bloqué + liberation du bloc avec une explosion adjacente
+			(5) Emplacement bloqué + propagation sur les cases adjacentes par tour
+
+	Types de bonbons :
+		(0) Classique
+		(1) Rayé vertical
+		(2)	Rayé horizontal 
+		(3)	Sac de bonbon 
+		(4) Boule a facette
+		(5) Fruit
+		(6) Bombe
+
+		Apparitions :
+			(0) Par défaut
+			(1)	Combo de 4 bonbons par un mouvement vertical
+			(2) Combo de 4 bonbons par un mouvement horizontal
+			(3)	Combo de 5 bonbons en L ou en T
+			(4) Combo de 6 bonbons en ligne ou colonne
+			(5) Objectifs de niveaux
+			(6) Objectifs de niveaux
+				
+		Effets :
+			(0)	Explose seul
+			(1) Explose une colonne entière
+			(2) Explose une ligne entière
+			(3)	Explose sur une zone de 3*3 à deux reprises
+			(4) Explose tout les bonbons de la couleur avec laquelle la boule a été échangé
+			(5) Aucun effet
+			(6) N tour pour detruire des bonbons adjacents sinon <Game Over>
+			(1+1)/(1+2)/(2+2) Explose une ligne ET une colonne
+			(3+3) Explose sur une zone de 5*5 à deux reprises
+			(1+3) Explose trois colonnes
+			(2+3) Explose trois lignes
+			(4+3) Explose deux couleurs
+			(4+1)/(4+2) Transforme tout les bonbons en rayé vertical ou horizontal (aleatoire ou moitié vertical / moitié horizontal)
+			(4+4) Explose tout
+
+	Couleurs :
+		(u) Unicolore (uniquement boules a facettes et fruits)
+		(b) Bleu
+		(g) Vert
+		(r) Rouge
+		(y) Jaune
+		(o) Orange
+		(p) Violet
+
+

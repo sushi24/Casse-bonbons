@@ -21,55 +21,55 @@ public class Emplacement {
 	== Attribut ==
 	============*/
 
-	Plateau nom_plateau;
+	private Plateau nom_plateau;
 	/**
 	*	Plateau sur lequel l'emplacement se situe
 	*	@see Emplacement#get_plateau()
 	*	@see Emplacement#set_plateau(Plateau)
 	*/
-	int emp_x;
+	private int emp_x;
 	/**
 	*	Coordonnées x a laquel l'emplacement se situe
 	*	@see Emplacement#get_emp_x()
 	*	@see Emplacement#set_emp_x(int)
 	*/
-	int emp_y;
+	private int emp_y;
 	/**
 	*	Coordonnées y a laquel l'emplacement se situe
 	*	@see Emplacement#get_emp_y()
 	*	@see Emplacement#set_emp_y(int)
 	*/
-	Bonbon bonbon;
+	private Bonbon bonbon;
 	/**
 	*	Bonbon a l'emplacement
 	*	@see Emplacement#get_bonbon()
 	*	@see Emplacement#set_bonbon(Bonbon)
 	*/
-	int type_emplacement;
+	private int type_emplacement;
 	/**
 	*	Type d'emplacement
 	*	@see Emplacement#get_emplacement()
 	*	@see Emplacement#set_emplacement(Emplacement)
 	*/
-	Emplacement emp_haut;
+	private Emplacement emp_haut;
 	/**
 	*	L'emplacement situé au dessus
 	*	@see Emplacement#get_emp_haut()
 	*	@see Emplacement#set_emp_haut(Emplacement)
 	*/
-	Emplacement emp_bas;
+	private Emplacement emp_bas;
 	/**
 	*	L'emplacement situé au dessus
 	*	@see Emplacement#get_emp_bas()
 	*	@see Emplacement#set_emp_bas(Emplacement)
 	*/
-	Emplacement emp_gauche;
+	private Emplacement emp_gauche;
 	/**
 	*	L'emplacement situé au dessus
 	*	@see Emplacement#get_emp_gauche()
 	*	@see Emplacement#set_emp_gauche(Emplacement)
 	*/
-	Emplacement emp_droite;
+	private Emplacement emp_droite;
 	/**
 	*	L'emplacement situé au dessus
 	*	@see Emplacement#get_emp_droite()

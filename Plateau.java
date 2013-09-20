@@ -9,13 +9,13 @@ public class Plateau {
 	== Attribut ==
 	============*/
 
-	int nb_col;
+	private int nb_col;
 	/**
 	*	Taille limite de x
 	*		@see Plateau#get_nb_col()
 	*		@see Plateau#set_nb_col(int)
 	*/
-	int nb_ligne;
+	private int nb_ligne;
 	/**
 	*	Taille limite de y
 	*		@see Plateau#get_nb_ligne()

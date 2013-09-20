@@ -3,21 +3,34 @@ import java.lang.Math;
 public class Bonbon {
 	/**
 	*	Objet Bonbon
-	*		type_bonbon :
-	*			- 0 : vide
-	*			- 1 : couleur 1
-	*			- .............
-	*			- 5 : couleur 5
-	*			- 6 : super bonbon 1
-	*			- .............
-	*			- 10 : super bonbon 5
+	*		Type_bonbon :
+	*			(0) classique
+	*			(1) rayé vertical
+	*			(2)	rayé horizontal
+	*			(3)	sac de bonbon
+	*			(4) boule a facette
+	*	
+	*		Couleur :
+	*
+	*			(0) unicolore (uniquement boule a facette)
+	*			(1) bleu
+	*			(2) vert
+	*			(3) rouge
+	*			(4) jaune
+	*			(5) orange
+	*			(6) violet
+	*
+	*		Condition d'apparition des bonbons :
+	*			(0) Par défaut
+	*			(1) Combo de 4 bonbons par un mouvement vertical
+	*			(2)	Combo de 4 bonbons par un mouvement horizontal
 	*/
 
 	/*=============
 	== Attributs ==
 	=============*/
 
-	int type_bonbon;
+	private int type_bonbon;
 	/**
 	*	Type de bonbon
 	*		@see Bonbon#get_bonbon()
