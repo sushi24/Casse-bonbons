@@ -4,7 +4,7 @@ Sujet : Candy crush
 Groupe :  
 	MOREAU Vivien  
 	KETHEESWARAN Sujaanth  
-	BATTILLENI Jerome  
+	BETTILLENI Jerome  
 	MAMATH Frederic  
   
 How to Push :  
