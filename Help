@@ -7,7 +7,8 @@ Détails des fonctionnalités de Candy crush
 		Position sur le plateau (nom, x, et y)
 		Contenance (null, libre, bonbon et/ou obstacle)
 
-	Ecoulements des bonbons : 
+	Ecoulements des bonbons :
+
 
 	Types d obstacles :
 		(0) Null
@@ -28,26 +29,26 @@ Détails des fonctionnalités de Candy crush
 	Types de bonbons :
 		(0) Classique
 		(1) Rayé vertical
-		(2)	Rayé horizontal 
-		(3)	Sac de bonbon 
+		(2) Rayé horizontal 
+		(3) Sac de bonbon 
 		(4) Boule a facette
 		(5) Fruit
 		(6) Bombe
 
 		Apparitions :
 			(0) Par défaut
-			(1)	Combo de 4 bonbons par un mouvement vertical
+			(1) Combo de 4 bonbons par un mouvement vertical
 			(2) Combo de 4 bonbons par un mouvement horizontal
-			(3)	Combo de 5 bonbons en L ou en T
+			(3) Combo de 5 bonbons en L ou en T
 			(4) Combo de 6 bonbons en ligne ou colonne
 			(5) Objectifs de niveaux
 			(6) Objectifs de niveaux
 				
 		Effets :
-			(0)	Explose seul
+			(0) Explose seul
 			(1) Explose une colonne entière
 			(2) Explose une ligne entière
-			(3)	Explose sur une zone de 3*3 à deux reprises
+			(3) Explose sur une zone de 3*3 à deux reprises
 			(4) Explose tout les bonbons de la couleur avec laquelle la boule a été échangé
 			(5) Aucun effet
 			(6) N tour pour detruire des bonbons adjacents sinon <Game Over>
