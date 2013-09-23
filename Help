@@ -2,29 +2,11 @@ Détails des fonctionnalités de Candy crush
 
 	Plateau :
 		Colonnes * Lignes = Nombre d emplacement
+		Emplacement[x][y]
 
 	Emplacement :
-		Position sur le plateau (nom, x, et y)
-		Contenance (null, libre, bonbon et/ou obstacle)
-
-	Ecoulements des bonbons :
-
-
-	Types d obstacles :
-		(0) Null
-		(1) Libre
-		(2) Classique
-		(3) Gelée
-		(4) Réglise
-		(5) Chocolat
-
-		Effets : 
-			(0) Emplacement non disponible
-			(1) Emplacement libre (en attente occupation)
-			(2) Emplacement occupé avec un bonbon
-			(3) Emplacement libre/occupé + bloc objectifs
-			(4) Emplacement bloqué + liberation du bloc avec une explosion adjacente
-			(5) Emplacement bloqué + propagation sur les cases adjacentes par tour
+		Bonbon
+		Obstacle
 
 	Types de bonbons :
 		(0) Classique
@@ -68,5 +50,65 @@ Détails des fonctionnalités de Candy crush
 		(y) Jaune
 		(o) Orange
 		(p) Violet
+
+	Types d obstacles :
+		(0) Null
+		(1) Libre
+		(2) Classique
+		(3) Gelée
+		(4) Réglise
+		(5) Chocolat
+
+		Effets : 
+			(0) Emplacement non disponible
+			(1) Emplacement libre (en attente occupation)
+			(2) Emplacement occupé avec un bonbon
+			(3) Emplacement libre/occupé + bloc objectifs
+			(4) Emplacement bloqué + liberation du bloc avec une explosion adjacente
+			(5) Emplacement bloqué + propagation sur les cases adjacentes par tour
+
+	Ecoulements des bonbons :
+		Ordre de priorité :
+			(1) De haut vers le bas
+			(2) De gauche vers la droite (dans le cas ou les bonbons ne peuvent pas arrivé d'en haut)
+		Legende :
+			O	-> Bonbon qui tombe
+			X	-> Bonbon qui disparait
+			.	-> Emplacement libre / occupé par un bonbon deja present
+			N	-> Obstacle
+			?	-> Emplacement vide
+
+			1) Ecoulement vertical
+			O	.	.				.	.	.
+			O	.	.				.	.	.
+			O	.	.				.	.	.
+			X	.	.		->		O	.	.
+			X	.	.				O	.	.
+			X	.	.				O	.	.
+
+			2) Ecoulement horizontal
+			O	O	O				.	.	.
+			O	O	O		->		O	O	O
+			X	X	X				O	O	O
+
+			3) Ecoulement horizontal avec obstacle (1)
+			O	N	N	.			.	N	N	.
+			O	N	N	O	->		.	N	N	.
+			X	X	X	.			O	O	O	.
+
+			4) Ecoulement horizontal avec obstacle (2)
+			O	N	N	N	.		.	N	N	N	.
+			O	N	N	N	.	->	.	N	N	N	.
+			X	X	X	.	.		O	O	?	.	.
+
+			5) Ecoulement vertical avec obstacle
+			O	N	.				.	N	.
+			O	N	.				.	N	.
+			O	N	.				.	N	.
+			O	X	.		->		O	O	.
+			O	X	.				O	O	.
+			.	X	.				.	O	.
+
+
 
 

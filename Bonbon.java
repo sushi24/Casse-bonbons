@@ -3,27 +3,10 @@ import java.lang.Math;
 public class Bonbon {
 	/**
 	*	Objet Bonbon
-	*		Type_bonbon :
-	*			(0) classique
-	*			(1) rayé vertical
-	*			(2)	rayé horizontal
-	*			(3)	sac de bonbon
-	*			(4) boule a facette
-	*	
-	*		Couleur :
+	*		int type_bonbon
+	*		String couleur
 	*
-	*			(0) unicolore (uniquement boule a facette)
-	*			(1) bleu
-	*			(2) vert
-	*			(3) rouge
-	*			(4) jaune
-	*			(5) orange
-	*			(6) violet
-	*
-	*		Condition d'apparition des bonbons :
-	*			(0) Par défaut
-	*			(1) Combo de 4 bonbons par un mouvement vertical
-	*			(2)	Combo de 4 bonbons par un mouvement horizontal
+	*		String set_rand_couleur()
 	*/
 
 	/*=============
@@ -37,30 +20,81 @@ public class Bonbon {
 	*		@see Bonbon#set_bonbon(int)
 	*/
 
+	private String couleur;
+	/**
+	*	Couleur du bonbon
+	*	@see Bonbon#get_couleur()
+	*	@see Bonbon#set_couleur(String)
+	*/
+
 	/*=================
 	== Constructeurs ==
 	=================*/
 
 	Bonbon () {
-		/**
-		*	Constructeur vide
-		*/
-		this.type_bonbon = null;
+		this.type_bonbon = 0;
+		this.couleur = set_rand_couleur();
+
+	}
+
+	/*==============
+	== Accesseurs ==
+	==============*/
+
+	int get_type_bonbon () {
+		return this.type_bonbon;
+	}
+
+	String get_couleur () {
+		return this.couleur;
+	}
+
+	/*==============
+	== Modifieurs ==
+	==============*/
+
+	void set_type_bonbon (int type_bonbon) {
+		this.type_bonbon = type_bonbon;
+	}
+
+	void set_couleur (String couleur) {
+		this.couleur = couleur;
 	}
 
 	/*=============
 	== Fonctions ==
 	=============*/
 
-	int set_rand_type_bonbon () {
+	String set_rand_couleur () {
 		/**
 		*	Generer aleatoirement un type de bonbon
 		*/
-		int nb_type_bonbon = 5;
-		int type_bonbon;
+		int nb_couleur = 6;
+		String couleur = null;
+		int random_couleur;
 
-		type_bonbon = (int) (Math.rand() * nb_type_bonbon);
+		random_couleur = (int) ((Math.random() * nb_couleur) + 1);
+		switch(random_couleur) {
+			case 1 : couleur = "Rouge"; break;
+			case 2 : couleur = "Bleu"; break;
+			case 3 : couleur = "Violet"; break;
+			case 4 : couleur = "Orange"; break;
+			case 5 : couleur = "Jaune"; break;
+			case 6 : couleur = "Vert"; break;
+			default : couleur = "Unicolore"; break;
+		}
 
-		return type_bonbon;
+		return couleur;
 	}
+
+	/*
+	public static void main (String[] args) {
+		Bonbon test_rand_color;
+
+		for (int i = 0; i < 20; i++) {
+			test_rand_color = new Bonbon();
+			System.out.println(test_rand_color.couleur);
+		}
+	}
+	*/
 }
